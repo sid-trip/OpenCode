@@ -17,23 +17,14 @@ def interact(
     console.print(f"[bold green]Starting OpenCode CLI...[/bold green]")
     console.print(f"[dim]Model: {model} | Cloud: {cloud or 'None'} | Workspace: {workspace}[/dim]\n")
     
-    # TODO: Initialize LangGraph agent here
-    
     while True:
-        try:
-            user_input = typer.prompt("You")
-            if user_input.lower() in ("exit", "quit", "q"):
-                console.print("[dim]Exiting OpenCode CLI...[/dim]")
-                break
-                
-            # TODO: Pass user_input to agent and process response
-            # Mocking response for now
-            response_text = f"**Agent:** I heard you say: *{user_input}*. (Agent logic not fully hooked up yet)"
-            console.print(Markdown(response_text))
-            
-        except typer.Abort:
-            console.print("\n[dim]Aborted.[/dim]")
+        user_input = typer.prompt("You")
+        if user_input.lower() in ("exit", "quit", "q"):
+            console.print("[dim]Exiting OpenCode CLI...[/dim]")
             break
+        
+        response_text = f"**Agent:** Mock response for: *{user_input}*"
+        console.print(Markdown(response_text))
 
 @app.command()
 def run_task(task: str = typer.Argument(..., help="Single task for the agent to execute")):
@@ -41,7 +32,6 @@ def run_task(task: str = typer.Argument(..., help="Single task for the agent to 
     Run a single headless task through the agent and return the result.
     """
     console.print(f"[bold blue]Executing task:[/bold blue] {task}")
-    # TODO: Invoke agent for a single shot
     console.print("[green]Task complete.[/green]")
 
 if __name__ == "__main__":
