@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+typer
+rich
+langgraph
+langchain
+langchain-core
+pydantic
+pydantic-settings
