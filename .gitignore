@@ -57,6 +57,6 @@ site/
 *.egg
 *.egg-info/
 pip-wheel-metadata/
-
+package-lock.json
 # Jupyter
 .ipynb_checkpoints/
