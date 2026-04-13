@@ -5,5 +5,8 @@ rich
 langgraph
 langchain
 langchain-core
+langchain-anthropic
+langchain-ollama
+langchain-openai
 pydantic
 pydantic-settings
