@@ -8,7 +8,7 @@ console = Console()
 @app.command()
 def interact(
     model: str = typer.Option("llama3", "--model", "-m", help="Model backend to use"),
-    cloud: str = typer.Option("", "--cloud", "-c", help="Cloud provider to use (if any)"),
+    cloud: str = typer.Option("", "--cloud", "-c", help="Cloud provider to use (anthropic, openai, or gemini)"),
     workspace: str = typer.Option(".", "--workspace", "-w", help="Workspace path context")
 ):
     """
@@ -35,7 +35,7 @@ def interact(
 def run_task(
     task: str = typer.Argument(..., help="Single task for the agent to execute"),
     model: str = typer.Option("llama3", "--model", "-m", help="Model backend to use"),
-    cloud: str = typer.Option("", "--cloud", "-c", help="Cloud provider to use (if any)"),
+    cloud: str = typer.Option("", "--cloud", "-c", help="Cloud provider to use (anthropic, openai, or gemini)"),
     workspace: str = typer.Option(".", "--workspace", "-w", help="Workspace path context")
 ):
     """

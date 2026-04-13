@@ -6,6 +6,7 @@ langgraph
 langchain
 langchain-core
 langchain-anthropic
+langchain-google-genai
 langchain-ollama
 langchain-openai
 pydantic
