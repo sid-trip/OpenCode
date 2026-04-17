@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1)
-    model: str = "llama3"
+    model: str = "llama3.1"
     cloud_provider: str = ""
     workspace: str = "."
     session_id: str | None = None
