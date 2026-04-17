@@ -49,7 +49,7 @@ htmlcov/
 venv/
 env/
 ENV/
-
+.env
 # Packaging/build artifacts
 build/
 site/
